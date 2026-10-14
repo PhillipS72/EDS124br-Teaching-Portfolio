@@ -15,70 +15,83 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #f1f5f9;
+            background: #f1f5f9;
             color: #1e293b;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         header {
             background: linear-gradient(135deg, #1e293b, #334e82);
             color: white;
             text-align: center;
-            padding: 70px 20px;
+            padding: 35px 20px;
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin: 0 0 12px;
+            font-size: 2rem;
+            margin: 0 0 6px;
         }
 
         header p {
             color: #cbd5e1;
-            font-size: 1.1rem;
             margin: 0;
         }
 
         main {
-            max-width: 1000px;
-            margin: 45px auto;
+            max-width: 1100px;
+            margin: 30px auto;
             padding: 0 20px;
         }
 
         .section-title {
-            font-size: 1.7rem;
-            margin-bottom: 25px;
+            font-size: 1.5rem;
+            margin: 0 0 20px;
+        }
+
+        /* Two-column layout */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            align-items: start;
         }
 
         .project {
             background: white;
-            border-radius: 14px;
-            padding: 28px;
-            margin-bottom: 28px;
+            border-radius: 12px;
+            padding: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
             border: 1px solid #e2e8f0;
+            min-width: 0;
         }
 
         .project h2 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.4rem;
+            font-size: 1.15rem;
+            margin: 0 0 10px;
+            line-height: 1.35;
+        }
+
+        .project h3 {
+            font-size: 0.95rem;
+            margin: 12px 0;
         }
 
         .project p {
             color: #64748b;
-            margin-bottom: 20px;
+            font-size: 0.9rem;
+            margin: 0 0 12px;
         }
 
         .video-container {
-            position: relative;
             width: 100%;
             aspect-ratio: 16 / 9;
             overflow: hidden;
-            border-radius: 10px;
+            border-radius: 8px;
             background: #0f172a;
         }
 
         .video-container iframe {
+            display: block;
             width: 100%;
             height: 100%;
             border: none;
@@ -86,9 +99,10 @@
 
         .video-link {
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 12px;
             color: #2563eb;
             font-weight: 600;
+            font-size: 0.9rem;
             text-decoration: none;
         }
 
@@ -98,22 +112,26 @@
 
         footer {
             text-align: center;
-            padding: 30px 20px;
+            padding: 25px 20px;
             color: #64748b;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
             header {
-                padding: 50px 20px;
+                padding: 25px 15px;
             }
 
             header h1 {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
 
             .project {
-                padding: 18px;
+                padding: 16px;
             }
         }
     </style>
@@ -130,124 +148,127 @@
 
         <h2 class="section-title">My Projects</h2>
 
-        <!-- PROJECT 1 -->
-        <section class="project">
-            <h2>Show What You Know: Explain Your Program</h2>
+        <div class="projects-grid">
 
-            <p>
-                This video explains the purpose of my program and
-                how the code works.
-            </p>
+            <!-- PROJECT 4: NEWEST -->
+            <section class="project">
+                <h2>Show What You Know: Explain Your Program - Rat Octagon for Cheese</h2>
 
-            <h3>Program Explanation Video</h3>
+                <p>
+                    This video explains the purpose of my program and
+                    how the code works. It focuses on Week 3's Bee Spinning
+                    program using nested loops.
+                </p>
 
-            <div class="video-container">
-                <iframe
-                    src="https://www.youtube.com/embed/eD35IsC190w"
-                    title="Program Explanation Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
-            </div>
+                <h3>Program Explanation Video</h3>
 
-            <a class="video-link"
-               href="https://youtu.be/eD35IsC190w"
-               target="_blank"
-               rel="noopener noreferrer">
-                Watch on YouTube ↗
-            </a>
-        </section>
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/csUeebiQVKA"
+                        title="Program Explanation Video - Rat Octagon for Cheese"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
 
-        <!-- PROJECT 2 -->
-        <section class="project">
-            <h2>Show What You Know: Explain Your Program - BreakDancing</h2>
+                <a class="video-link"
+                   href="https://youtu.be/csUeebiQVKA"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Watch on YouTube ↗
+                </a>
+            </section>
 
-            <p>
-                This video explains the purpose of my program and
-                how the code works.
-            </p>
+            <!-- PROJECT 3 -->
+            <section class="project">
+                <h2>Show What You Know: Explain Your Program - Bee Spinning</h2>
 
-            <h3>Program Explanation Video - BreakDancing</h3>
+                <p>
+                    This video explains the purpose of my program and
+                    how the code works. It focuses on Week's 2 Bee Spinning
+                    program using repeats.
+                </p>
 
-            <div class="video-container">
-                <iframe
-                    src="https://www.youtube.com/embed/0LaOQ7bFY2M"
-                    title="Program Explanation Video - BreakDancing"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
-            </div>
+                <h3>Program Explanation Video</h3>
 
-            <a class="video-link"
-               href="https://youtu.be/0LaOQ7bFY2M"
-               target="_blank"
-               rel="noopener noreferrer">
-                Watch on YouTube ↗
-            </a>
-        </section>
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/BPnfL_-jBbw"
+                        title="Program Explanation Video - Bee Spinning"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
 
-        <!-- PROJECT 3 -->
-        <section class="project">
-            <h2>Show What You Know: Explain Your Program - Bee Spinning</h2>
+                <a class="video-link"
+                   href="https://youtu.be/BPnfL_-jBbw"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Watch on YouTube ↗
+                </a>
+            </section>
 
-            <p>
-                This video explains the purpose of my program and
-                how the code works. It focuses on Week's 2 Bee Spinning
-                program using repeats.
-            </p>
+            <!-- PROJECT 2 -->
+            <section class="project">
+                <h2>Show What You Know: Explain Your Program - BreakDancing</h2>
 
-            <h3>Program Explanation Video</h3>
+                <p>
+                    This video explains the purpose of my program and
+                    how the code works.
+                </p>
 
-            <div class="video-container">
-                <iframe
-                    src="https://www.youtube.com/embed/BPnfL_-jBbw"
-                    title="Program Explanation Video - Bee Spinning"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
-            </div>
+                <h3>Program Explanation Video - BreakDancing</h3>
 
-            <a class="video-link"
-               href="https://youtu.be/BPnfL_-jBbw"
-               target="_blank"
-               rel="noopener noreferrer">
-                Watch on YouTube ↗
-            </a>
-        </section>
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/0LaOQ7bFY2M"
+                        title="Program Explanation Video - BreakDancing"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
 
+                <a class="video-link"
+                   href="https://youtu.be/0LaOQ7bFY2M"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Watch on YouTube ↗
+                </a>
+            </section>
 
-        <!-- PROJECT 4 -->
-        <section class="project">
-            <h2>Show What You Know: Explain Your Program - Rat Octagon for Cheese</h2>
+            <!-- PROJECT 1 -->
+            <section class="project">
+                <h2>Show What You Know: Explain Your Program</h2>
 
-            <p>
-                This video explains the purpose of my program and
-                how the code works. It focuses on Week 3's Bee Spinning
-                program using nested loops.
-            </p>
+                <p>
+                    This video explains the purpose of my program and
+                    how the code works.
+                </p>
 
-            <h3>Program Explanation Video</h3>
+                <h3>Program Explanation Video</h3>
 
-            <div class="video-container">
-                <iframe
-                    src="https://youtu.be/csUeebiQVKA"
-                    title="Program Explanation Video - Rat Octagon for Cheese"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
-            </div>
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/eD35IsC190w"
+                        title="Program Explanation Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
 
-            <a class="video-link"
-               href="https://youtu.be/csUeebiQVKA"
-               target="_blank"
-               rel="noopener noreferrer">
-                Watch on YouTube ↗
-            </a>
-        </section>
+                <a class="video-link"
+                   href="https://youtu.be/eD35IsC190w"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Watch on YouTube ↗
+                </a>
+            </section>
+
+        </div>
 
     </main>
 
