@@ -1,56 +1,228 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Phillip's Teaching Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e293b, #334e82);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 12px;
+        }
+
+        header p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.7rem;
+            margin-bottom: 25px;
+        }
+
+        .project {
+            background: white;
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+        }
+
+        .project h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #0f172a;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .video-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 50px 20px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .project {
+                padding: 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Phillip's Teaching Portfolio</h1>
 
-    <h2>Show What You Know: Explain Your Program</h2>
+    <header>
+        <h1>Phillip's Teaching Portfolio</h1>
+        <p>Programming Projects & Video Explanations</p>
+    </header>
 
-    <p>
-        This video explains the purpose of my program and
-        how the code works.
-    </p>
+    <main>
 
-    <h3>Program Explanation Video</h3>
+        <h2 class="section-title">My Projects</h2>
 
-    <p>
-        <a href="https://youtu.be/eD35IsC190w">
-            Watch my program explanation video
-        </a>
-    </p>
+        <!-- PROJECT 1 -->
+        <section class="project">
+            <h2>Show What You Know: Explain Your Program</h2>
 
-    <h2>Show What You Know: Explain Your Program - BreakDancing</h2>
+            <p>
+                This video explains the purpose of my program and
+                how the code works.
+            </p>
 
-    <p>
-        This video explains the purpose of my program and
-        how the code works.
-    </p>
+            <h3>Program Explanation Video</h3>
 
-    <h3>Program Explanation Video - BreakDancing</h3>
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/eD35IsC190w"
+                    title="Program Explanation Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
 
-    <p>
-        <a href="https://youtu.be/0LaOQ7bFY2M">
-            Watch my program explanation video
-        </a>
-    </p>
+            <a class="video-link"
+               href="https://youtu.be/eD35IsC190w"
+               target="_blank"
+               rel="noopener noreferrer">
+                Watch on YouTube ↗
+            </a>
+        </section>
 
-    <h2>Show What You Know: Explain Your Program - Bee Spinning</h2>
+        <!-- PROJECT 2 -->
+        <section class="project">
+            <h2>Show What You Know: Explain Your Program - BreakDancing</h2>
 
-    <p>
-        This video explains the purpose of my program and
-        how the code works. It focuses on Week's 2 Bee Spinning program using repeats.
-    </p>
+            <p>
+                This video explains the purpose of my program and
+                how the code works.
+            </p>
 
-    <h3>Program Explanation Video</h3>
+            <h3>Program Explanation Video - BreakDancing</h3>
 
-    <p>
-        <a href="https://youtu.be/BPnfL_-jBbw">
-            Watch my program explanation video
-        </a>
-    </p>
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/0LaOQ7bFY2M"
+                    title="Program Explanation Video - BreakDancing"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <a class="video-link"
+               href="https://youtu.be/0LaOQ7bFY2M"
+               target="_blank"
+               rel="noopener noreferrer">
+                Watch on YouTube ↗
+            </a>
+        </section>
+
+        <!-- PROJECT 3 -->
+        <section class="project">
+            <h2>Show What You Know: Explain Your Program - Bee Spinning</h2>
+
+            <p>
+                This video explains the purpose of my program and
+                how the code works. It focuses on Week's 2 Bee Spinning
+                program using repeats.
+            </p>
+
+            <h3>Program Explanation Video</h3>
+
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/BPnfL_-jBbw"
+                    title="Program Explanation Video - Bee Spinning"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <a class="video-link"
+               href="https://youtu.be/BPnfL_-jBbw"
+               target="_blank"
+               rel="noopener noreferrer">
+                Watch on YouTube ↗
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Phillip's Teaching Portfolio</p>
+    </footer>
 
 </body>
 </html>
